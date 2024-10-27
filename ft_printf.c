@@ -37,9 +37,9 @@ int	args_type(va_list args, char var_type)
 }
 int	ft_printf(const char *strs, ...)
 {
-	int		i;
-	va_list	args;
-	int		len;
+	int			i;
+	va_list		args;
+	int			len;
 
 	va_start(args, strs);
 	i = 0;
@@ -63,7 +63,13 @@ int	ft_printf(const char *strs, ...)
 
 int main(void)
 {
-	void *a;
-	printf("%p\n", a);
-	ft_printf("%p", a);
+	ft_printf("my onw printf(c): %c\n", 'a');
+	ft_printf("my onw printf(s): %s\n", "abcdef");
+	ft_printf("my onw printf(p): %p\n", &("abcdef"));
+	ft_printf("my onw printf(d): %d\n", -123456789);
+	ft_printf("my onw printf(i): %i\n", 123456789);
+	ft_printf("my onw printf(u): %u\n", 123456789);
+	ft_printf("my onw printf(x): %x\n", 123456789);
+	ft_printf("my onw printf(X): %X\n", 123456789);
+	ft_printf("my onw printf(%%): %%\n", 123456789);
 }
