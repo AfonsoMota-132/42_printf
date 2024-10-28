@@ -60,16 +60,17 @@ int	ft_printf(const char *strs, ...)
 	va_end(args);
 	return (len);
 }
-
+/*
 int main(void)
 {
-	ft_printf("my onw printf(c): %c\n", 'a');
-	ft_printf("my onw printf(s): %s\n", "abcdef");
-	ft_printf("my onw printf(p): %p\n", &("abcdef"));
+	//ft_printf("my onw printf(c): %c\n", 'a');
+	//ft_printf("my onw printf(s): %s\n", "abcdef");
+	printf("original printf(p): %p\n", &("abcdef"));
+	ft_printf("my own printf(p): %p\n", &("abcdef"));
 	ft_printf("my onw printf(d): %d\n", -123456789);
 	ft_printf("my onw printf(i): %i\n", 123456789);
 	ft_printf("my onw printf(u): %u\n", 123456789);
 	ft_printf("my onw printf(x): %x\n", 123456789);
 	ft_printf("my onw printf(X): %X\n", 123456789);
 	ft_printf("my onw printf(%%): %%\n", 123456789);
-}
+}*/
