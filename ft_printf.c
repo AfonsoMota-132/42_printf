@@ -17,19 +17,19 @@ static int	args_type(va_list args, char var_type)
 {
 	if (var_type == 'c')
 		ft_putchar_fd(va_arg(args, int), 1);
-	else if (var_type == 's')
+	if (var_type == 's')
 		return (ft_printfstr(va_arg(args, char *)));
-	else if (var_type == 'p')
-		return (ft_printpoint(va_arg(args, unsigned int)));
-	else if (var_type == 'd' || var_type == 'i')
+	if (var_type == 'p')
+		return (ft_printpoint(va_arg(args, unsigned int *)));
+	if (var_type == 'd' || var_type == 'i')
 		return (ft_printfnbr(va_arg(args, int)));
-	else if (var_type == 'u')
+	if (var_type == 'u')
 		return (ft_printfunbr(va_arg(args, unsigned int)));
-	else if (var_type == 'x')
-		return (ft_printhex(va_arg(args, unsigned int), 0));
-	else if (var_type == 'X')
-		return (ft_printhex(va_arg(args, unsigned int), 1));
-	else if (var_type == '%')
+	if (var_type == 'x')
+		return (ft_printfhex(va_arg(args, unsigned int), 0));
+	if (var_type == 'X')
+		return (ft_printfhex(va_arg(args, unsigned int), 1));
+	if (var_type == '%')
 		ft_putchar_fd('%', 1);
 	if (var_type == 'c' || var_type == '%')
 		return (1);
@@ -42,9 +42,9 @@ int	ft_printf(const char *strs, ...)
 	int			len;
 
 	va_start(args, strs);
-	i = 0;
+	i = -1;
 	len = 0;
-	while (strs[i])
+	while (strs[++i])
 	{
 		if (strs[i] != '%')
 		{
@@ -52,10 +52,7 @@ int	ft_printf(const char *strs, ...)
 			len++;
 		}
 		else
-		{
 			len	+= args_type(args, strs[++i]);
-		}
-		i++;
 	}
 	va_end(args);
 	return (len);

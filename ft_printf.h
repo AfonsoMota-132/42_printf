@@ -20,7 +20,7 @@ int ft_printf(const char *strs, ...);
 int	ft_printfstr(char *str);
 int	ft_printfnbr(int nbr);
 int	ft_printfunbr(unsigned int nbr);
-int	ft_printhex(unsigned int nbr, int uporlow);
-int	ft_printpoint(unsigned int pointer);
+int	ft_printfhex(unsigned int nbr, int uporlow);
+int	ft_printpoint(unsigned int *pointer);
 
 #endif 

@@ -13,19 +13,22 @@
 #include "libft/libft.h"
 #include "ft_printf.h"
 
-int	ft_printhex(unsigned int nbr, int uporlow)
+int	ft_printfhex(unsigned int nbr, int uporlow)
 {
-	int	len;
+	int				len;
 
 	len = 0;
+	if (nbr < 16)
+	{
+		if(uporlow == 0)
+			len += write(1, &"0123456789abcdef"[nbr], 1);
+		if(uporlow == 1)
+			len += write(1, &"0123456789ABCDEF"[nbr], 1);
+	}
 	if (nbr >= 16)
 	{
-		len += ft_printhex((nbr / 16), uporlow);
-		len += ft_printhex((nbr % 16), uporlow);
+		len += ft_printfhex(nbr / 16, uporlow);
+		len += ft_printfhex(nbr % 16, uporlow);
 	}
-	if (nbr < 16 && uporlow == 0)
-		write(1, &"0123456789abcdef"[nbr], 1);
-	else if (nbr < 16 && uporlow == 1)
-		write(1, &"0123456789ABCDEF"[nbr], 1);
-	return (len + 1);
+	return (len);
 }

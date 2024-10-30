@@ -21,7 +21,7 @@ int	ft_printfunbr(unsigned int nbr)
 	if (nbr >= 10)
 	{
 		len += ft_printfunbr(nbr / 10);
-		len += ft_printfnbr(nbr % 10);
+		nbr = nbr % 10;
 	}
 	if (nbr < 10)
 		ft_putchar_fd(nbr + '0', 1);
