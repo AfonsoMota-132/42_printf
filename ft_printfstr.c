@@ -1,0 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_printfstr.c                                     :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/30 12:17:18 by afogonca          #+#    #+#             */
+/*   Updated: 2024/10/30 12:17:35 by afogonca         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+
+#include "libft/libft.h"
+#include "ft_printf.h"
+
+int	ft_printfstr(char *str)
+{
+	int	i;
+
+	i = 0;
+	ft_putstr_fd(str, 1);
+	while (str[i] != '\0')
+		i++;
+	return (i);
+}
