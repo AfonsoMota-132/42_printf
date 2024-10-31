@@ -20,9 +20,9 @@ int	ft_printfhex(unsigned int nbr, int uporlow)
 	len = 0;
 	if (nbr < 16)
 	{
-		if(uporlow == 0)
+		if (uporlow == 0)
 			len += write(1, &"0123456789abcdef"[nbr], 1);
-		if(uporlow == 1)
+		if (uporlow == 1)
 			len += write(1, &"0123456789ABCDEF"[nbr], 1);
 	}
 	if (nbr >= 16)

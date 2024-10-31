@@ -43,6 +43,3 @@ int	ft_printfnbr(int nbr)
 	ft_putnbr_fd(nbr, 1);
 	return (ft_nbrlen(nbr));
 }
-
-
-

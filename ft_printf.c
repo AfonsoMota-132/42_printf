@@ -35,6 +35,7 @@ static int	args_type(va_list args, char var_type)
 		return (1);
 	return (0);
 }
+
 int	ft_printf(const char *strs, ...)
 {
 	int			i;
@@ -52,7 +53,7 @@ int	ft_printf(const char *strs, ...)
 			len++;
 		}
 		else
-			len	+= args_type(args, strs[++i]);
+			len += args_type(args, strs[++i]);
 	}
 	va_end(args);
 	return (len);
