@@ -27,7 +27,7 @@ static int	ft_printf_adress(unsigned long p)
 	return (len);
 }
 
-int	ft_printpoint(unsigned int *pointer)
+int	ft_printfpointer(unsigned int *pointer)
 {
 	int	len;
 

@@ -13,7 +13,7 @@
 RM = rm -f
 
 SRCS = ft_printf.c ft_printfstr.c ft_printfunbr.c ft_printf_utils.c ft_printfhex.c \
-	ft_printpoint.c libft/ft_putchar_fd.c libft/ft_putstr_fd.c libft/ft_putnbr_fd.c
+	ft_printfpointer.c libft/ft_putchar_fd.c libft/ft_putstr_fd.c libft/ft_putnbr_fd.c
 
 OBJS = ${SRCS:.c=.o}
 NAME = libftprintf.a
