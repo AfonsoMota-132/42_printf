@@ -20,7 +20,7 @@ static int	args_type(va_list args, char var_type)
 	if (var_type == 's')
 		return (ft_printfstr(va_arg(args, char *)));
 	if (var_type == 'p')
-		return (ft_printfpointer(va_arg(args, unsigned int *)));
+		return (ft_printfpointer(va_arg(args, void *)));
 	if (var_type == 'd' || var_type == 'i')
 		return (ft_printfnbr(va_arg(args, int)));
 	if (var_type == 'u')

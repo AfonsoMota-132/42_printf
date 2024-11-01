@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include <stdio.h>
 
 static int	ft_printf_adress(unsigned long p)
 {
@@ -27,7 +28,7 @@ static int	ft_printf_adress(unsigned long p)
 	return (len);
 }
 
-int	ft_printfpointer(unsigned int *pointer)
+int	ft_printfpointer(void *pointer)
 {
 	int	len;
 

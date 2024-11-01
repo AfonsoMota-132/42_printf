@@ -21,6 +21,6 @@ int	ft_printfstr(char *str);
 int	ft_printfnbr(int nbr);
 int	ft_printfunbr(unsigned int nbr);
 int	ft_printfhex(unsigned int nbr, int uporlow);
-int	ft_printfpointer(unsigned int *pointer);
+int	ft_printfpointer(void *pointer);
 
 #endif 
