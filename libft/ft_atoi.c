@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: passunca <passunca@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: afogonca <afogonca@student.42porto.com>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/24 15:56:39 by passunca          #+#    #+#             */
-/*   Updated: 2024/10/24 16:06:03 by passunca         ###   ########.fr       */
+/*   Created: 2024/12/05 21:33:19 by afogonca          #+#    #+#             */
+/*   Updated: 2024/12/05 21:33:22 by afogonca         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
